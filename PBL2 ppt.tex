@@ -1,0 +1,437 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+\usepackage{tikz}
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Diabetes Prediction using ML]{DIABETES PREDICTION USING MACHINE LEARNING} % The short title appears at the bottom of every slide, the full title is only on the title page
+ 
+\author[Shreyash Somvanshi]{
+\bf Project Members:-
+  \bf 2127062 Shreyash Somvanshi\\\medskip
+  \bf 2127063 Sujay Shinde\\\medskip
+  \bf 2127076 Prajwal Rudrapwar\\\medskip
+  \bf 2127073 Vedanti Mane\\\medskip
+  \bf 2127032 Trupti Kharat\\\medskip
+  %{\small \url{Your email} } \\ 
+  %{\small \url{Your URL}}
+  \bf Guided by: Prof. Rajkumar Panchal sir
+  }
+\institute[VPKBIET] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+{
+  Department of Artificial Intelligence $\&$ Data Science\\ Vidya Pratishthan's Kamalnayan Bajaj Institute of College and Technology\\
+  Vidyanagari, Baramati-413133} \\ % Your institution for the title page
+\medskip
+%\textit{john@smith.com} % Your email address
+}
+
+\logo{\begin{tikzpicture}
+\filldraw[color=red!50, fill=red!25, very thick](1,8) circle (0.0);
+\includegraphics[height=8mm, width=7mm]{vp.png}
+\node[draw,color=white] at (0,0) {};
+\end{tikzpicture}}
+
+\date{} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{\bf INTRODUCTION}
+  \begin{block}
+    {}
+    Motivation of the Project
+  \end{block}
+  \normalsize{Motive of this project is to use the Artificial Intelligence technologies like Machine Learning in healthcare sector to increase efficiency and accuracy of results.
+}
+  \begin{block}
+    {}
+    Literature Survey
+  \end{block}
+  \normalsize{This Diabetes Prediction Model makes use of various classification Algorithms to categorize patients into diabetic and non-diabetic.Currently we have achieved 80\% accuracy but it can be made more precise  with help of appropriate data processing.
+}
+ % \begin{itemize}
+   % \item Point 1
+   % \item Point 2
+    %\item Point 3 
+ %   \end{itemize}
+   % \begin{equation}
+    %  y=f(x)
+    %\end{equation}
+    %\begin{itemize}
+     % \item Point 1
+    %\end{itemize}
+    %\begin{equation}
+    %f(x,y)=0  
+    %\end{equation}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\bf PROBLEM STATEMENT}
+  Make use of new emerging technologies in the healthcare to reduce time and efforts.
+  \begin{block}
+    {}
+    Goals and Objectives
+  \end{block}
+  \normalsize{To use modern technologies to increase accuracy and automation in healthcare.}
+  \begin{block}
+    {}
+    Statement of Scope
+  \end{block}
+  \normalsize{This Diabetes Prediction using Machine Learning works for Healthcare domain.It has 80\% accuracy in predicting diabetes based on the factors like patient’s insulin, glucose level, age,etc. factors. This Diabetes Prediction Model makes use of various classification Algorithms to categorize patients into diabetic and non-diabetic.
+}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\bf ABSTRACT}
+  \normalsize{\paragraph{Diabetes is a chronic disease with the potential to cause a worldwide healthcare crisis. According to International Diabetes Federation 382 million people are living with diabetes across the whole world. By 2035, this will be doubled as 592 million. Diabetes is a disease caused due to the increase level of blood glucose. This high blood glucose produces the symptoms of frequent urination, increased thirst, and increased hunger. Diabetes is a one of the leading cause of blindness, kidney failure, amputations, heart failure and stroke.}}
+\end{frame}
+
+\begin{frame}
+  
+  \normalsize{\paragraph{Machine learning is an emerging scientific field in data science dealing with the ways in which machines learn from experience. The aim of this project is to develop a system which can perform early prediction of diabetes for a patient with a higher accuracy by combining the results of different machine learning techniques. The algorithms like K nearest neighbour, Logistic Regression, Random forest, Support vector machine and Decision tree are used. The accuracy of the model using each of the algorithms is calculated. Then the one with a good accuracy is taken as the model for predicting the diabetes.
+    }
+}
+\end{frame}
+
+%\begin{frame}
+ % \begin{itemize}
+  %  \item The tangent vector of the parametric curve is given by
+  %\end{itemize}
+  %\begin{equation}
+   % P^{'}(t)=[x^{'}(t),y^{'}(t)]
+  %\end{equation}
+  %\begin{itemize}
+   % \item The slope of the curve is 
+  %\end{itemize}
+  %\begin{equation}
+   % \frac{dy}{dx}=\frac{dy/dt}{dx/dt}=\frac{y^{'}(t)}%{x^{'}(t)}
+  %\end{equation}
+%\end{frame}
+
+\begin{frame}
+\frametitle{\bf AREA PROJECT}
+  \begin{itemize}
+      \item \normalsize{This Diabetes Prediction using Machine Learning works for Healthcare domain.It has 80\% accuracy in predicting diabetes based on the factors like patient’s insulin, glucose level, age,etc.}
+  \end{itemize}
+\begin{block}
+    {}
+    Technical Keywords
+  \end{block}
+  \normalsize{Machine Learning, Diabetes, Decision tree, Train-Test-Split, K nearest neighbour, Logistic Regression, Support vector Machine, Accuracy
+}  
+  \end{frame}
+  
+ \begin{frame}
+\frametitle{\bf LITERATURE SURVEY}
+  \begin{itemize}
+      
+      \item \normalsize{The analysis of related work gives results on various healthcare datasets, where analysis and predictions were carried out using various methods and techniques. Various prediction models have been developed and implemented by various researchers using variants of machine learning algorithms.}
+     
+      \item \normalsize{Aiswarya Iyer (2015) used classification technique to study hidden patterns in diabetes dataset. Naïve Bayes and Decision Trees were used in this model. Comparison was made for performance of both algorithms and effectiveness of both algorithms was shown as a result.B.M. Patil, R.C. Joshi and Durga Toshniwal (2010) proposed Hybrid Prediction Model which includes Simple K-means clustering algorithm, followed by application of classification algorithm to the result obtained from clustering algorithm. In order to build classifiers C4.5 decision tree algorithm is used.}
+  \end{itemize}
+  \end{frame}
+
+\begin{frame}
+\frametitle{\bf METHODOLOGY}
+  \begin{enumerate}
+      \item Import the dataset with various patient records on parameters like age,insulin, glucose, blood pressure.
+      \item Clean the dataset i.e. remove the unwanted constraints (Preprocessing)
+      \item Use the preffered algorithm.
+      \item Perform train-test-split on processed dataset.
+      \item Compare and check Accuracy
+
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{\bf DATASET DESCRIPTION}
+ 
+  \begin{itemize}
+    \item Dataset used for this model is located on "https://gitub.com/YantraByte/Dataset/raw/main/Diabetes.
+    \item It consists the detailed records of patients.The attributes in datasets are
+Age, Insulin, Pregnancies, Glucose, DPF, BMI, Blood pressure,etc.
+    \item  Dataset consists of 768 rows and 9 columns
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}
+\frametitle{\bf PACKAGES/LIBRARIES and FUNCTIONS used:}
+    \begin{enumerate}
+        \item Pandas
+        \item Numpy
+        \item sklearn
+        \item sklearn.model\_selection import train\_test\_split
+        \item sklearn.metrics import mean\_absolute\_error
+        \item sklearn.linear\_model import LogisticRegression
+        \item sklearn.linear\_model import LinearRegression
+        \item sklearn.tree import DecisionTreeClassifier
+        \item sklearn.metrics import confusion\_matrix, classification\_report
+        
+    \end{enumerate}
+ 
+\end{frame}
+
+\begin{frame}
+\frametitle{\bf ARCHITECTURE}
+\includegraphics[height=70mm, width=100mm]{ucdlatex.png}
+\end{frame}
+
+\begin{frame}
+\frametitle{\bf APPLICATION}
+    \normalsize{As the technology in each domain is progressing rapidly, this Machine Learning based Diabetes Prediction Model can also come in normal usage.This can
+also be updated with the future technological trends.It can adapt the changes
+without much complications.Now-a-days the covid self testing kits are available in the market similarly this can also be used for testing the Diabetic
+diseases without going to the hospitals.}
+\end{frame}
+
+\begin{frame}
+\frametitle{\bf CONSTRAINTS}
+
+\begin{itemize}
+    \item Medical tests are required to get the accurate values of insulin , glucose ,
+blood pressure of patients.
+    \item It does not give 100\% accuracy.
+    \item Results may change as we are testing on human body not a machine.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{\bf SOFTWARE and HARDWARE RESOURCES:}
+  \begin{block}
+    {}
+    Software Resources:
+  \end{block}
+  \begin{itemize}
+    \item Python 3.9
+    \item Jupyter notebook
+    \item Google Colab
+    \item Github
+  \end{itemize}
+  \begin{block}
+    {}
+    Hardware Resources:
+  \end{block}
+  \begin{itemize}
+    \item A PC or Laptop with minimum 4GB RAM
+    500 MB Storage space and intel core i3 processor.
+    \item Android device/smartphone with internet connectivity.
+    \item ios device with internet connectivity.
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}
+\frametitle{\bf CONCLUSION}
+    \normalsize{One of the important real-world medical problems is the detection of diabetes
+at its early stage.In this study, various machine learning algorithms are applied on the dataset and the classification has been done
+using various algorithms. In this study, systematic efforts are made in designing
+a system which results in the prediction of diabetes. During this work,
+four machine learning classification algorithms are studied and evaluated on
+various measures. Experiments are performed on YBI Foundation Diabetes Database.
+Experimental results determine the adequacy of the designed system with
+an achieved accuracy of 80\% Using Decision Tree Algorithm. In future, the
+designed system with the used machine learning classification algorithms
+can be used to predict or diagnose other diseases. The work can be extended
+and improved for the automation of diabetes analysis including some other
+machine learning algorithms.}
+\end{frame}
+
+%\begin{frame}
+%\frametitle{\bf ACKNOWLEDGEMENT}
+%\normalsize{We express our deep sense of gratitude to all those who have been involved in preparation of this project.We are thankful to all the faculties
+%of Deptt.of AI and DS for their constant support, guidance and encouragement. We acknowledge the kind of support, efforts and timely guidance provided by Prof.Rajkumar Panchal sir.This project report helps in better
+%understanding of the subject matter. We also like to express regards to the books and internet and linkedin conections which provided us with subject related insights.}
+%\end{frame}
+
+
+
+
+
+
+
+
+% \section{Introduction}
+% \begin{frame}
+%   \frametitle{Introduction}
+%   \begin{enumerate}
+%     \item The failure of the Electricity Transformer is a crucial issue and has a major effect on the electricity system reliability. 
+%     \item Failure causes a extra burden over the accounts and in turns it affect the level and quality  of the service provided.
+%     \item If you predict remaining life of the transformer by some means causes relief on accounts-surprised!  
+%     \item The transformer fails because of concentration of the vital gas components such as $CO_2$, $CO$, $CFC$, Temperature inside the transformer etc.
+%   \end{enumerate}
+% \end{frame}
+%
+% \section{Innovativeness}
+%
+% \begin{frame}
+%   \frametitle{Innovativeness}
+%   \begin{enumerate}
+%     \item To understand the remaining life of the electricity transformer,there are some manual techniques.
+%     \item By manual method the transformer is opened and checking the concentration of the $CO_{2}$, $CO$  and $CFC$ 
+%     \item This causes physical damage to the transformer in turns it help to reduce the life of the transformer.
+%     \item Without opening the transformer can we find out the concentration of the components like $CO_2$, $CO$, $CFC$ and temperature.- YES- by means of sensor network
+%     
+%   \end{enumerate}
+%   \end{frame}
+% \begin{frame}
+%   \frametitle{Continued...}
+%   \begin{enumerate}
+%     \item The sensors like, $CO$, $CO_2$, $CFC$ and temperature sensors deployed on the the transformer reports, their readings to the host system. 
+%     \item Based upon the previous learning and data received from sensor network host system calculates predicted remaining life of the transformer.
+%   \end{enumerate}
+% \end{frame}
+%
+% \section{Objective}
+%
+% \begin{frame}
+%   \frametitle{Objective}
+%
+%   \begin{enumerate}
+%     \item The main objective of this study is to associate LIFE of the transformer with the different components involved inside the transformer. 
+%     \item Build the association between $CO$, $CO_2$, $CFC$ and temperature, so that it will to predict the remaining life of the transformer.
+%    
+%   \end{enumerate}
+% \end{frame}
+%
+% \section{Methodology}
+%
+% \begin{frame}
+%   \frametitle{Methodology}
+% \begin{enumerate}
+%   \item The methodology discussed is based upon association rule mining-Building the strong association between different components and form the rules with which life will calculated.
+%   \item It is a supervised machine learning methodology, it takes decision based upon the previous learning.
+% \end{enumerate}
+%   
+% \end{frame}
+%
+% \begin{frame}
+%   \frametitle{Applicability}
+% \begin{enumerate}
+%   \item Per month thousands of electricity transformer get failed because of different reasons.
+%   \item The most important reason is concentration of the different gases and temperature of the transformer. 
+%   \item This decides the remaining life of the transformer.
+%   \item Predicting the remaining life of the transformer can help to reduce extra burden at the failure time of the transformer 
+% \end{enumerate}
+%   
+% \end{frame}
+%
+%
+% \section{Conclusion}
+%
+% \begin{frame}
+%   \frametitle{Conclusion}
+%
+%   \begin{itemize}
+%     \item Easy to use
+%     \item Good results
+%   \end{itemize}
+% \end{frame}
+%
+% %------------------------------------------------
+%
+% \begin{frame}
+% \frametitle{References}
+% \footnotesize{
+% \begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
+% \bibitem[Smith, 2012]{p1} John Smith (2012)
+% \newblock Title of the publication
+% \newblock \emph{Journal Name} 12(3), 45 -- 678.
+% \end{thebibliography}
+% }
+% \end{frame}
+%
+% %------------------------------------------------
+%
+\begin{frame}
+\Huge{\centerline{THANK YOU}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
