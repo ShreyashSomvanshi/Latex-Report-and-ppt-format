@@ -1,0 +1,366 @@
+\documentclass[pdftex,a4paper,11pt,oneside,openright]{report}
+\usepackage[dvips]{graphics}
+\usepackage{color}
+\usepackage{algorithm,algorithmic}
+\usepackage{epsfig}
+\usepackage{pseudocode,fancybox, fancyhdr}
+\usepackage{pgothic}
+\usepackage[T1]{fontenc}
+\usepackage{yfonts}
+\usepackage[T1]{fontenc}
+%\usepackagen{fonts}
+\usepackage[T1]{fontenc}
+\usepackage{duerer}
+\usepackage[T1]{fontenc}
+\usepackage{trajan}
+\usepackage[T1]{fontenc}
+\usepackage{fancyvrb}
+\usepackage{fancyhdr}
+\usepackage{anysize}
+\usepackage{coeptitle}   %% Thesis Title Page
+\usepackage{latexsym}
+%\usepackage{pictex}
+\usepackage{fancyvrb}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{rawfonts}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{yfonts}
+%\usepackage{arev}
+\usepackage{algorithm}
+\usepackage[T1]{fontenc}
+\pagestyle{headings}
+%\pagestyle{fancy}
+\usepackage{yfonts}
+\usepackage[pdftex,
+        colorlinks=true,
+        urlcolor=black,       % \href{...}{...} external (URL)
+        filecolor=black,     % \href{...} local file
+        linkcolor=black,       % \ref{...} and \pageref{...}
+	citecolor=black,
+        pdftitle={BE Project Report},
+        pdfauthor={Your name},
+        pdfsubject={Project Title},
+        pdfkeywords={ACM Key words},
+%        pagebackref,
+%        pdfpagemode=true,
+         bookmarksopen=true]{hyperref}
+\setlength{\textwidth}{6.27in}
+\setlength{\textheight}{9.69in}
+\setlength{\topmargin}{0.0in}
+\setlength{\oddsidemargin}{0.0in}			% Customisable
+\setlength{\headheight}{0.1in}
+\setlength{\headsep}{0.2in}
+\setlength{\topskip}{0.0in}
+\fontencoding{T1}		% Font specification : Times New Roman, Bold, Normal, 18
+\fontfamily{cmr}		% Roman
+\fontseries{m}			% Medium
+\fontshape{n}			% Upright
+\fontsize{10pt}{3}		
+\linespread{1.5}		% Vertical spacing between lines
+\selectfont			% Select the specified font
+\usepackage{tikz}
+%\chapterstyle{lyhne}
+\usepackage{tikz, lipsum}% http://ctan.org/pkg/{pgf,lipsum}
+\newcommand*{\chapnumfont}{\normalfont\sffamily\huge\bfseries}
+\newcommand*{\printchapternum}{
+  \begin{tikzpicture}
+    \draw[fill,color=black] (0,0) rectangle (2cm,2cm);
+    \draw[color=white] (1cm,1cm) node { \chapnumfont\thechapter };
+  \end{tikzpicture}
+}
+\newcommand*{\chaptitlefont}{\normalfont\sffamily\Huge\bfseries}
+\newcommand*{\printchaptertitle}[1]{\flushright\chaptitlefont#1}
+
+\makeatletter
+% \@makechapterhead prints regular chapter heading.
+% Taken directly from report.cls and modified.
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \ifnum \c@secnumdepth >\m@ne
+        \printchapternum
+        \par\nobreak
+        \vskip 20\p@
+    \fi
+    \interlinepenalty\@M
+    \printchaptertitle{#1}\par\nobreak
+    \vskip 40\p@
+  }}
+% \@makeschapterhead prints starred chapter heading.
+% Taken directly from report.cls and modified.
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \interlinepenalty\@M
+    \printchaptertitle{#1}\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+\begin{document}	% Start of Report
+
+\pagestyle{fancy}
+\DeclareGraphicsExtensions{.png, .ps}
+\begin{titlepage}
+\begin{center}
+\LARGE{\bf{\textsc{DIABETES PREDICTION USING MACHINE LEARNING}\\}}	% LARGE = 17.28
+\vspace{10pt}
+\textsc{{\small A\\  \small  Project Based Learning Report\\}}		% Large = 14.40
+\textsc{{\small Submitted \\ \small by\\}}
+\begin{table}[htbp]
+	\begin{center}
+	\begin{tabular}{ l c c l }
+	\large\bf{Mr. Shreyash Somvanshi} & & &  \large\bf{2127062} \\[0.3cm] 
+        \large\bf{Mr. Sujay Shinde}& & &  \large\bf{2127063} \\[0.3cm]
+	\large\bf{Mr. Prajwal Rudrapwar}& & & \large\bf{2127076}   \\[0.3cm]
+	\large\bf{Ms. Vedanti Mane}& & & \large\bf{2127073}
+	\\[0.3cm]
+	\large\bf{Ms. Trupti Kharat}& & & \large\bf{2127032}
+		\end{tabular}
+	\end{center}
+	\end{table}
+\textsc{{ \small In partial fulfillment for the requirement of Project Based Learning-II\\ \vspace{1.5pt}of\\}}
+\LARGE{{\swabfamily Bachelor of Artificial Intelligence and Data Science\\}}% Mention only appropriate degree.
+\vspace{20pt}
+%names of advisors
+\large{Under the guidance of\\ }
+\Large{\bf{Prof. Rajkumar Panchal}\\}
+\large{(Assistant Professor)}\\
+%\Large{Vidya Pratishthan's College of Engineering, Baramati\\}
+\vspace{10pt}
+\begin{figure}[!h]
+\begin{center}
+%\includegraphics{figures/multihop_network}
+\includegraphics[height=40mm, width=35mm]{vpkbiet.png}
+%\caption{2: Clustering Model}\label{fig:clu}
+\end{center}
+\end{figure}
+\vspace{-.6cm}
+\LARGE{\bf{\textsc{Department of Artificial Intelligence and Data Science}}}\\
+\Large{ \textsc{Vidya Pratishthan's Kamalnayan Bajaj Institute of Engineering and Technology}}\\
+\large{Bhigwan Road, Vidyanagari}\\
+\large{Baramati-413133}\\
+%\vfill
+\large{2021-2022}
+\end{center}
+\end{titlepage}
+\thispagestyle{empty}
+\vspace{-50pt}
+\begin{figure}[!h]
+\begin{center}
+%\includegraphics{figures/multihop_network}
+\includegraphics[height=40mm, width=35mm]{vpkbiet.png}
+%\caption{2: Clustering Model}\label{fig:clu}
+\vspace{-.8cm}
+\end{center}
+\end{figure}
+\begin{center}			% LARGE = 18
+\linespread{1}
+	\small{Vidya Pratishthan's} \\ \large{Kamalnayan Bajaj Institute of Engineering and Technology, Baramati}\\	
+	\Large{\bf{Department of Artificial Intelligence and Data Science}}\\
+	
+\end{center}
+
+%\vspace{pt}			% Vertical space between dept name and ``certi''
+\begin{center}
+\Huge{{\swabfamily Certificate\\}}
+	
+\end{center}
+
+\vspace{12pt}
+
+\linespread{1}			% Double spacing between lines
+\selectfont
+\large{
+\textsc{This is to certify that following students} 
+\begin{table}[htbp]
+	\begin{center}
+	\begin{tabular}{ l c c l }
+	
+	\large\bf{Mr. Shreyash Somvanshi} & & & \large\bf{2127062} \\ [0.3cm]
+\large\bf{Mr. Sujay Shinde} & & & \large\bf{2127063} \\ [0.3cm]
+\large\bf{Mr. Prajwal Rudrapwar} & & & \large\bf{2127076} \\ [0.3cm]
+\large\bf{Ms. Vedanti Mane} & & & \large\bf{2127073} \\ [0.3cm]
+\large\bf{Ms. Trupti Kharat} & & & \large\bf{2127032} \\ [0.3cm]
+		\end{tabular}
+	\end{center}
+	\end{table} \\
+		\textsc{	have successfully completed their project work on}
+	\begin{center}
+	  {\bf DIABETES PREDICTION USING MACHINE LEARNING}
+	\end{center}
+\textsc{during the academic year \textbf{2021-2022} in the partial fulfillment towards the completion of \textbf{Project Based Learning-II} in \textbf{Artificial Intelligence and Data Science}}
+}
+
+\vspace{60pt}
+
+\begin{center}		% Horizontal spacing used to keep the signatures in columns at the ends of
+% lines
+
+Project Guide\hspace{\stretch{1}}Head, Deptt.of AI $\&$ DS\\
+\normalsize{\bf{{(Rajkumar Panchal) }\hspace{\stretch{1}}(Digambar Padulkar)}\\
+%\small{Assistant Professor\hspace{\stretch{1}}Assistant Professor}\\
+}
+\vspace{60pt}
+Principal\\
+(\bf Dr. R. S. Bichkar) \\
+%\small{Assistant Professor\hspace{\stretch{1}}Assistant Professor}\\
+
+
+\vspace{60pt}
+\bf{Internal Examiner\hspace{\stretch{1}}External Examiner}\\
+\end{center}
+\newpage
+\pagenumbering{roman}
+
+\chapter*{\begin{center}\Huge{Acknowledgments}\end{center}}
+%\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{{Acknowledgments}}
+\Large{We express our deep sense of gratitude to all those who have been instrumental in preparation of this project.We are thankful to all the faculties of Deptt.of AI and DS for their constant support, guidance and encouragement.
+We acknowledge the kind of support, efforts and timely guidance provided by Prof.Rajkumar Panchal sir.This project report helps in better understanding of the subject matter.
+We also like to express regards to the books and internet and linkedin conections who provided us with subject related insights.}
+\begin{flushright}
+\textbf{Mr. Shreyash Somvanshi}\\ 
+\textbf{Mr. Sujay Shinde      }\\
+\textbf{Mr. Prajwal Rudrapwar } \\
+\textbf{Ms. Vedanti Mane      } \\
+\textbf{Ms. Trupti Kharat     } \\
+\end{flushright}
+\newpage
+\onehalfspacing
+%\chapter*{\begin{center} {\Huge{Abstract}}\end{center}}
+%\addcontentsline{toc}{chapter}{{Abstract}}
+%\subparagraph{}
+%\renewcommand{\footrulewidth } {1.5pt}
+%\renewcommand{\headrulewidth}{1.2pt}
+\lfoot{\small \it Diabetes Prediction Using Machine Learning}
+\rfoot{\small \it VPKBIET, Baramati}
+\lhead{}
+
+
+\tableofcontents	
+\addtocontents{toc}{\protect\thispagestyle{empty}} 
+%\listoftables
+%\addcontentsline{toc}{chapter}{List of Tables}
+%\listoffigures
+%\addcontentsline{toc}{chapter}{List of Figures}
+%\chapter*{List of Symbols}
+%\addcontentsline{toc}{chapter}{List of Symbols}
+
+\newpage
+		% Change to Arabic numbers for main chapters.
+\pagenumbering{arabic}
+
+\chapter{\bf Synopsis }
+\section{\bf Title}
+\large{\bf DIABETES PREDICTION USING MACHINE LEARNING}
+%\section{Brief Description}
+%\section{Problem Definition}
+%\section{Applying Software Engineering Approach}
+
+\section{Technical Keywords}
+\Large{Machine Learning, Diabetes, Decision tree, Train-Test-Split, K nearest neighbour, Logistic Regression, Support vector Machine, Accuracy.
+} 
+
+\chapter{Problem Statement}
+\Large{Make use of new emerging technologies in the healthcare to reduce time and efforts.}
+\section{Goals and Objectives}
+\Large{To use modern technologies to increase accuracy and automation in healthcare}
+\section{Statement of Scope}
+\Large{This Diabetes Prediction using Machine Learning works for Healthcare domain.It has 80\% accuracy in predicting diabetes based on the factors like patient's insulin, glucose level, age,etc. factors. This Diabetes Prediction Model makes use of various classification Algorithms to categorize patients into diabetic and non-diabetic.}
+
+\chapter{ABSTRACT}
+\Large{Diabetes is a chronic disease with the potential to cause a worldwide health care crisis. According to International Diabetes Federation 382 million people are living with diabetes across the whole world. By 2035, this will be doubled as 592 million. Diabetes is a disease caused due to the increase level of blood glucose. This high blood glucose produces the symptoms of frequent urination, increased thirst, and increased hunger. Diabetes is a one of the leading cause of blindness, kidney failure, amputations, heart failure and stroke. When we eat, our body turns food into sugars, or glucose. At that point, our pancreas is supposed to release insulin. Insulin serves as a key to open our cells, to allow the glucose to enter and allow us to use the glucose for energy. But with diabetes, this system does not work. Type 1 and type 2 diabetes are the most common forms of the disease, but there are also other kinds, such as gestational diabetes, which occurs during pregnancy, as well as other forms. Machine learning is an emerging scientific field in data science dealing with the ways in which machines learn from experience. The aim of this project is to develop a system which can perform early prediction of diabetes for a patient with a higher accuracy by combining the results of different machine learning techniques. The algorithms like K nearest neighbour, Logistic Regression, Random forest, Support vector machine and Decision tree are used. The accuracy of the model using each of the algorithms is calculated. Then the one with a good accuracy is taken as the model for predicting the diabetes.} 
+
+\section{Area Project}
+\Large{This Diabetes Prediction using Machine Learning works for Healthcare domain.It has 80\% accuracy in predicting diabetes based on the factors like patient's insulin, glucose level, age,etc. factors.  }
+
+\section{Methodology of Problem Solving}
+\begin{enumerate}
+    \item Import the dataset with various patient records on parameters like age, insulin, glucose, blood pressure.
+    \item Clean the dataset i.e. remove the unwanted constraints (Preprocessing)
+    \item Use the preffered algorithm
+    \item Perform train-test-split on processed dataset
+    \item Compare abd check accuracy
+\end{enumerate}
+\chapter{Introduction}
+\section{Motivation of the Project}
+\Large{Motive of this project is to use the Artificial Intelligence technologies like Machine Learning in healthcare sector to increase efficiency and accuracy of results }
+\section{Literature Survey}
+\Large{This Diabetes Prediction Model makes use of various classification Algorithms to categorize patients into diabetic and non-diabetic.}\\
+\Large{Currently we have achieved 80\% accuracy but it can be made more precise with help of appropriate data processing.}
+
+\chapter{Dataset Description}
+\begin{enumerate}
+    \item Dataset used for this model is located on "https://gitub.com/Yantra-Byte/Dataset/raw/main/Diabetes.csv" 
+    \item It consists the detailed records of patients.The attributes in datasets are Age, Insulin, Pregnancies, Glucose, DPF, BMI, Blood pressure,etc
+    \item Dataset consists of 768 rows and 9 columns
+    
+\end{enumerate}
+
+\chapter{Packages/Libraries used}
+We have used following Packages/Libraries:
+\Large{
+\begin{enumerate}
+    \item pandas
+    \item numpy
+    \item sklearn.model\_selection import train\_test\_split
+    \item sklearn.metrics import mean\_absolute\_error
+    \item sklearn.linear\_model import LogisticRegression
+    \item sklearn.linear\_model import LinearRegression
+    \item statsmodel.api
+    \item sklearn.metrics import confusion\_matrix, classification\_report
+    \item sklearn.tree import DecisionTreeClassifier
+\end{enumerate}
+}
+
+\chapter{Architecture}
+\includegraphics[height=90mm, width=150mm]{ucdlatex.png}
+%\chapter{Result Analysis}
+    %\section{Graphs}
+    %\includegraphics[height=60mm, width=80mm]{1.png}
+    %\includegraphics[height=60mm, width=80mm]{2.png}
+    %\includegraphics[height=60mm, width=80mm]{3.png}
+    %\includegraphics[height=60mm, width=80mm]{4.png}
+    %\includegraphics[height=60mm, width=80mm]{5.png}
+
+    %\section{section title goes here}
+    %\section{section title goes here}
+%\subsection{sub section title goes here}
+
+\chapter{Conclusion}
+\Large{One of the important real-world medical problems is the detection of diabetes at its early stage. In this study, systematic efforts are made in designing a system which results in the prediction of diabetes. During this work, five machine learning classification algorithms are studied and evaluated on various measures. Experiments are performed on john Diabetes Database. Experimental results determine the adequacy of the designed system with an achieved accuracy of 80\% Using Decision Tree Algorithm.
+In future, the designed system with the used machine learning classification algorithms can be used to predict or diagnose other diseases. The work can be extended and improved for the automation of diabetes analysis including some other machine learning algorithms. }
+
+\chapter{Application}
+\Large{As the technology in each domain is progressing rapidly, this Machine Learning based Diabetes Prediction Model can also come in normal usage.This can also be updated with the future technological trends.It can adapt the changes without much complications.Now-a-days the covid self testing kits are available in the market similarly this can also be used for testing the Diabetic diseases without going to the hospitals. } 
+
+\chapter{Constraints}
+\Large{*Medical tests are required to get the accurate values of insulin , glucose , blood pressure of patients.}\\
+\Large{*Results may change as we are testing on human body not a machine.}
+
+\chapter{Software/Hardware Resources}
+\Large{*Software Resources:}
+\begin{enumerate}
+    \item Python 3.9
+    \item Jupyter notebook
+    \item Github
+\end{enumerate}
+\Large{*Hardware Resources:}
+\begin{enumerate}
+    \item 4GB RAM
+    \item 1GB Storage space
+    \item Intel core i3 processor
+\end{enumerate}
+
+%\appendix
+%\chapter{Glossary}
+%Defines Terms, Acronyms and abbreviations used in the FRD
+%\chapter*{Annex  A}
+%Define terms, acronyms, and abbreviations used in the FRD
+\end{document}			% End of Report
