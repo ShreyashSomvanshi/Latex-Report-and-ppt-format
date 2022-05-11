@@ -1,4 +1,27 @@
 \documentclass[pdftex,a4paper,11pt,oneside,openright]{report}
+\usepackage{listings} %start of code insertion syntax
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+} %end of code insertion syntax
 \usepackage[dvips]{graphics}
 \usepackage{color}
 \usepackage{algorithm,algorithmic}
@@ -231,10 +254,14 @@ We also like to express regards to the books and internet and linkedin conection
 \textbf{Ms. Vedanti Mane      } \\
 \textbf{Ms. Trupti Kharat     } \\
 \end{flushright}
-\newpage
+
+
+\chapter*{\begin{center}\Huge{ABSTRACT}\end{center}}
+\Large{Diabetes is a chronic disease with the potential to cause a worldwide health care crisis. According to International Diabetes Federation 382 million people are living with diabetes across the whole world. By 2035, this will be doubled as 592 million. Diabetes is a disease caused due to the increase level of blood glucose. This high blood glucose produces the symptoms of frequent urination, increased thirst, and increased hunger. Diabetes is a one of the leading cause of blindness, kidney failure, amputations, heart failure and stroke. When we eat, our body turns food into sugars, or glucose. At that point, our pancreas is supposed to release insulin. Insulin serves as a key to open our cells, to allow the glucose to enter and allow us to use the glucose for energy. But with diabetes, this system does not work. Type 1 and type 2 diabetes are the most common forms of the disease, but there are also other kinds, such as gestational diabetes, which occurs during pregnancy, as well as other forms. Machine learning is an emerging scientific field in data science dealing with the ways in which machines learn from experience. The aim of this project is to develop a system which can perform early prediction of diabetes for a patient with a higher accuracy by combining the results of different machine learning techniques. The algorithms like K nearest neighbour, Logistic Regression, Random forest, Support vector machine and Decision tree are used. The accuracy of the model using each of the algorithms is calculated. Then the one with a good accuracy is taken as the model for predicting the diabetes.} 
+
 \onehalfspacing
 %\chapter*{\begin{center} {\Huge{Abstract}}\end{center}}
-%\addcontentsline{toc}{chapter}{{Abstract}}
+\addcontentsline{toc}{chapter}{{Abstract}}
 %\subparagraph{}
 %\renewcommand{\footrulewidth } {1.5pt}
 %\renewcommand{\headrulewidth}{1.2pt}
@@ -246,7 +273,7 @@ We also like to express regards to the books and internet and linkedin conection
 \tableofcontents	
 \addtocontents{toc}{\protect\thispagestyle{empty}} 
 %\listoftables
-%\addcontentsline{toc}{chapter}{List of Tables}
+%\addcontentsline{toc}{chapter}{}
 %\listoffigures
 %\addcontentsline{toc}{chapter}{List of Figures}
 %\chapter*{List of Symbols}
@@ -256,6 +283,7 @@ We also like to express regards to the books and internet and linkedin conection
 		% Change to Arabic numbers for main chapters.
 \pagenumbering{arabic}
 
+
 \chapter{\bf Synopsis }
 \section{\bf Title}
 \large{\bf DIABETES PREDICTION USING MACHINE LEARNING}
@@ -264,8 +292,7 @@ We also like to express regards to the books and internet and linkedin conection
 %\section{Applying Software Engineering Approach}
 
 \section{Technical Keywords}
-\Large{Machine Learning, Diabetes, Decision tree, Train-Test-Split, K nearest neighbour, Logistic Regression, Support vector Machine, Accuracy.
-} 
+\Large{Machine Learning, Diabetes, Decision tree, Train-Test-Split, K nearest neighbour, Logistic Regression, Support vector Machine, Accuracy.} 
 
 \chapter{Problem Statement}
 \Large{Make use of new emerging technologies in the healthcare to reduce time and efforts.}
@@ -274,19 +301,19 @@ We also like to express regards to the books and internet and linkedin conection
 \section{Statement of Scope}
 \Large{This Diabetes Prediction using Machine Learning works for Healthcare domain.It has 80\% accuracy in predicting diabetes based on the factors like patient's insulin, glucose level, age,etc. factors. This Diabetes Prediction Model makes use of various classification Algorithms to categorize patients into diabetic and non-diabetic.}
 
-\chapter{ABSTRACT}
-\Large{Diabetes is a chronic disease with the potential to cause a worldwide health care crisis. According to International Diabetes Federation 382 million people are living with diabetes across the whole world. By 2035, this will be doubled as 592 million. Diabetes is a disease caused due to the increase level of blood glucose. This high blood glucose produces the symptoms of frequent urination, increased thirst, and increased hunger. Diabetes is a one of the leading cause of blindness, kidney failure, amputations, heart failure and stroke. When we eat, our body turns food into sugars, or glucose. At that point, our pancreas is supposed to release insulin. Insulin serves as a key to open our cells, to allow the glucose to enter and allow us to use the glucose for energy. But with diabetes, this system does not work. Type 1 and type 2 diabetes are the most common forms of the disease, but there are also other kinds, such as gestational diabetes, which occurs during pregnancy, as well as other forms. Machine learning is an emerging scientific field in data science dealing with the ways in which machines learn from experience. The aim of this project is to develop a system which can perform early prediction of diabetes for a patient with a higher accuracy by combining the results of different machine learning techniques. The algorithms like K nearest neighbour, Logistic Regression, Random forest, Support vector machine and Decision tree are used. The accuracy of the model using each of the algorithms is calculated. Then the one with a good accuracy is taken as the model for predicting the diabetes.} 
+%\chapter{ABSTRACT}
+%\Large{} 
 
-\section{Area Project}
+\chapter{Area Project}
 \Large{This Diabetes Prediction using Machine Learning works for Healthcare domain.It has 80\% accuracy in predicting diabetes based on the factors like patient's insulin, glucose level, age,etc. factors.  }
 
-\section{Methodology of Problem Solving}
+\chapter{Methodology of Problem Solving}
 \begin{enumerate}
     \item Import the dataset with various patient records on parameters like age, insulin, glucose, blood pressure.
     \item Clean the dataset i.e. remove the unwanted constraints (Preprocessing)
-    \item Use the preffered algorithm
     \item Perform train-test-split on processed dataset
-    \item Compare abd check accuracy
+    \item Use the preffered algorithm
+    \item Compare and check accuracy
 \end{enumerate}
 \chapter{Introduction}
 \section{Motivation of the Project}
@@ -297,27 +324,44 @@ We also like to express regards to the books and internet and linkedin conection
 
 \chapter{Dataset Description}
 \begin{enumerate}
-    \item Dataset used for this model is located on "https://gitub.com/Yantra-Byte/Dataset/raw/main/Diabetes.csv" 
-    \item It consists the detailed records of patients.The attributes in datasets are Age, Insulin, Pregnancies, Glucose, DPF, BMI, Blood pressure,etc
+    \item This dataset is originally from the National Institute of Diabetes and Digestive and Kidney Diseases. The objective of the dataset is to diagnostically predict whether or not a patient has diabetes, based on certain diagnostic measurements included in the dataset. Several constraints were placed on the selection of these instances from a larger database.
+    \item Dataset used for this model is located on "https://raw.githubusercontent.com/ShreyashSomvanshi/Datasets/main/Diabetes.csv" 
+    \item It consists the detailed records of patients.The attributes in datasets are Age, Insulin, Pregnancies, Glucose, DiabetesPedigreeFunction, BMI, Blood pressure,etc
     \item Dataset consists of 768 rows and 9 columns
+    
     
 \end{enumerate}
 
-\chapter{Packages/Libraries used}
-We have used following Packages/Libraries:
+\chapter{Libraries and Functions used}
+%{We have used following Packages/Libraries:}
+\Large{Libraries: }
 \Large{
 \begin{enumerate}
     \item pandas
     \item numpy
+    \item sklearn
+\end{enumerate}
+\Large{Functions/Modules used from sklearn: }
+\begin{enumerate}
     \item sklearn.model\_selection import train\_test\_split
     \item sklearn.metrics import mean\_absolute\_error
     \item sklearn.linear\_model import LogisticRegression
     \item sklearn.linear\_model import LinearRegression
-    \item statsmodel.api
-    \item sklearn.metrics import confusion\_matrix, classification\_report
+    \item sklearn.metrics import accuracy\_score
+    \item sklearn.neighbors import KNeighborsClassifier
+    \item sklearn.naive\_bayes import GaussianNB
+    \item sklearn.svm import SVC
     \item sklearn.tree import DecisionTreeClassifier
 \end{enumerate}
 }
+
+\chapter{Project Planning}
+\centering
+\includegraphics[height=90mm, width=150mm]{Screenshot 2022-05-11 225556.png}
+
+\chapter{Class Diagram}
+\centering
+\includegraphics[height=110mm, width=160mm]{Class Diagram.png}
 
 \chapter{Architecture}
 \includegraphics[height=90mm, width=150mm]{ucdlatex.png}
@@ -332,10 +376,252 @@ We have used following Packages/Libraries:
     %\section{section title goes here}
     %\section{section title goes here}
 %\subsection{sub section title goes here}
+\chapter{Code}
+\begin{lstlisting}
+# -*- coding: utf-8 -*-
+"""PBL2DiabetesPredictionUsingML.ipynb
 
-\chapter{Conclusion}
-\Large{One of the important real-world medical problems is the detection of diabetes at its early stage. In this study, systematic efforts are made in designing a system which results in the prediction of diabetes. During this work, five machine learning classification algorithms are studied and evaluated on various measures. Experiments are performed on john Diabetes Database. Experimental results determine the adequacy of the designed system with an achieved accuracy of 80\% Using Decision Tree Algorithm.
-In future, the designed system with the used machine learning classification algorithms can be used to predict or diagnose other diseases. The work can be extended and improved for the automation of diabetes analysis including some other machine learning algorithms. }
+Automatically generated by Colaboratory.
+
+Original file is located at
+    https://colab.research.google.com/drive/1IpgIYr-Vhc95CbLqkOEK78A8P8njEYoE
+"""
+
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
+import warnings
+warnings.filterwarnings('ignore')
+
+"""https://raw.githubusercontent.com/ShreyashSomvanshi/Datasets/main/Diabetes.csv
+
+"""
+
+dataset = pd.read_csv(r'https://raw.githubusercontent.com/ShreyashSomvanshi/Datasets/main/Diabetes.csv')
+
+"""https://github.com/Yantra-Byte/Dataset/raw/main/Diabetes.csv"""
+
+dataset.head()
+
+dataset.tail()
+
+dataset.shape
+
+dataset.info()
+
+dataset.isnull().sum()
+
+dataset.describe()
+
+"""Visualizing Data"""
+
+# Now we will be imputing the mean value of the column to each missing value of that particular column
+dataset['Glucose'].fillna(dataset['Glucose'].mean(), inplace = True)
+dataset['BloodPressure'].fillna(dataset['BloodPressure'].mean(), inplace = True)
+dataset['SkinThickness'].fillna(dataset['SkinThickness'].median(), inplace = True)
+dataset['Insulin'].fillna(dataset['Insulin'].median(), inplace = True)
+dataset['BMI'].fillna(dataset['BMI'].median(), inplace = True)
+
+# Now, let's check that how well our outcome column is balanced
+color_wheel = {1: "#0392cf", 2: "#7bc043"}
+colors = dataset["Outcome"].map(lambda x: color_wheel.get(x + 1))
+print(dataset.Outcome.value_counts())
+p=dataset.Outcome.value_counts().plot(kind="pie")
+
+dataset['Outcome'].value_counts()
+
+# Plotting the distributions after removing the NAN values
+p = dataset.hist(figsize = (20,20))
+
+"""Correlation Matrix
+
+"""
+
+# Correlation between all the features before cleaning
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(12,10))
+p = sns.heatmap(dataset.corr(), annot=True,cmap ='Reds')  # seaborn has an easy method to showcase heatmap
+
+X = dataset.drop(columns='Outcome',axis=1)
+
+y = dataset['Outcome']
+
+X
+y
+
+"""#Declaring Training and Testing Data"""
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state = 0)
+
+X_train.shape, X_test.shape, y_train.shape, y_test.shape
+
+#from sklearn.linear_model import LogisticRegression
+#from sklearn.neighbors import KNeighborsClassifier
+#from sklearn.naive_bayes import GaussianNB
+#from sklearn.svm import SVC
+#from sklearn.tree import DecisionTreeClassifier
+#from sklearn.ensemble import RandomForestClassifier
+
+#model = LogisticRegression()
+#model = KNeighborsClassifier()
+#model = GaussianNB()
+#model = SVC()
+#model = DecisionTreeClassifier()
+#model = RandomForestClassifier()
+
+"""#Logistic Regression"""
+
+modl = LogisticRegression()
+modelLR = modl.fit(X_train, y_train)
+X_train_pred = modelLR.predict(X_train)
+trainingData_accuracy = accuracy_score(X_train_pred, y_train)
+print("Accuracy on Training Data : ", trainingData_accuracy)
+X_test_pred = modelLR.predict(X_test)
+testData_accuracy = accuracy_score(X_test_pred, y_test)
+print("Accuracy on Test Data : ", testData_accuracy)
+
+# from sklearn.metrics import classification_report, confusion_matrix
+
+# print(confusion_matrix(y_test, X_test_pred))
+# print(classification_report(y_test, X_test_pred))
+
+"""#K Neighbors Classifier"""
+
+modl = KNeighborsClassifier()
+modelKNN = modl.fit(X_train, y_train)
+X_train_pred = modelKNN.predict(X_train)
+trainingData_accuracy = accuracy_score(X_train_pred, y_train)
+print("Accuracy on Training Data : ", trainingData_accuracy)
+X_test_pred = modelKNN.predict(X_test)
+testData_accuracy = accuracy_score(X_test_pred, y_test)
+print("Accuracy on Test Data : ", testData_accuracy)
+
+"""#Support Vector Machine"""
+
+model = SVC()
+modelSVM = modl.fit(X_train, y_train)
+X_train_pred = modelSVM.predict(X_train)
+trainingData_accuracy = accuracy_score(X_train_pred, y_train)
+print("Accuracy on Training Data : ", trainingData_accuracy)
+X_test_pred = modelSVM.predict(X_test)
+testData_accuracy = accuracy_score(X_test_pred, y_test)
+print("Accuracy on Test Data : ", testData_accuracy)
+
+"""#Decision Tree"""
+
+modl = DecisionTreeClassifier()
+modelDT = modl.fit(X_train, y_train)
+X_train_pred = modelDT.predict(X_train)
+trainingData_accuracy = accuracy_score(X_train_pred, y_train)
+print("Accuracy on Training Data : ", trainingData_accuracy)
+X_test_pred = modelDT.predict(X_test)
+testData_accuracy = accuracy_score(X_test_pred, y_test)
+print("Accuracy on Test Data : ", testData_accuracy)
+
+"""#Naive Bayes"""
+
+modl = GaussianNB()
+modelNB = modl.fit(X_train, y_train)
+X_train_pred = modelNB.predict(X_train)
+trainingData_accuracy = accuracy_score(X_train_pred, y_train)
+print("Accuracy on Training Data : ", trainingData_accuracy)
+X_test_pred = modelNB.predict(X_test)
+testData_accuracy = accuracy_score(X_test_pred, y_test)
+print("Accuracy on Test Data : ", testData_accuracy)
+
+"""#Conclusion from Training and Testing Accuracies of different algorithms used:
+
+% <table>
+%   <tr>
+%     <th> Algorithm </th>
+%     <th> Testing Accuracy </th>
+%     <th> Training Accuracy </th>
+%   </tr>
+%   <tr>
+%     <td>Logistic Regression</td>
+%     <td>0.7792</td>
+%     <td>0.7636</td>
+%   </tr>
+%   <tr>
+%     <td>Naive Bayes</td>
+%     <td>0.7619</td>
+%     <td>0.7673</td>
+%   </tr>
+%   <tr>
+%     <td>Decision Tree</td>
+%     <td>0.7533</td>
+%     <td>1.0</td>
+%   </tr>
+%   <tr>
+%     <td>SVM</td>
+%     <td>0.7489</td>
+%     <td>0.7896</td>
+%   </tr>
+%   <tr>
+%     <td>KNN Classifier</td>
+%     <td>0.7489</td>
+%     <td>0.7896</td>
+%   </tr>
+% </table>
+
+1.In Logistic Regression this accuracy is not valid as its testing accuracy is less than training accuracy.Training accuracy must always be greater than Testing Accuracy.
+
+2.Naive Bayes accuracy we got is valid, and we may use it.
+
+3.Decision Tree gave us the Training accuracy of 100% but this is not valid because we are using a part of training data for testing. At the time of training, decision tree gained knowledge about that data, and now if you give same data to predict it will give exactly same value. That's why decision tree producing correct results every time.
+
+4.Support Vector Machine has given descent accuracy but not as much as Naive Bayes.
+
+5.KNN classifier has also given same accuracy as of SVM.
+
+#Building a Prediction System
+
+So from above conclusions we may either use SVM or KNN. Here we will be using SVM
+"""
+# (pd.Series(modl.feature_importances_, index=X.columns)
+#    .plot(kind='barh'))
+
+dataset.tail()
+
+inputData=(5,121,72,23,112,26.2,0.245,30)
+#inputData=(1,126,60,0,0,30.1,0.349,47) for this data at 766 LR,NB,gave wrong outputs.
+
+"""Convert input data to numpy array"""
+
+inputDataNumpyArray = np.asarray(inputData)
+
+"""Reshape the numpyy array as we are predicting for only one instance"""
+
+inputDataReshaped = inputDataNumpyArray.reshape(1,-1)
+
+prediction = modelSVM.predict(inputDataReshaped)
+print(prediction)
+
+if (prediction[0]==0):
+  print("The patient doesn't have Diabetes. ")
+else:
+  print("The patient is Diabetic. ")
+
+\end{lstlisting}
+
+
+\chapter{Result Analysis}
+\centering
+\includegraphics[height=100mm, width=150mm]{graphss.png}
+ \section{Correlation Matrix}
+    \centering
+    \includegraphics[height=110mm, width=150mm]{correln.png}
+ \section{Dependent Attribute}
+    \centering
+    \includegraphics[height=90mm, width=160mm]{dependent on.png}
 
 \chapter{Application}
 \Large{As the technology in each domain is progressing rapidly, this Machine Learning based Diabetes Prediction Model can also come in normal usage.This can also be updated with the future technological trends.It can adapt the changes without much complications.Now-a-days the covid self testing kits are available in the market similarly this can also be used for testing the Diabetic diseases without going to the hospitals. } 
@@ -357,6 +643,9 @@ In future, the designed system with the used machine learning classification alg
     \item 1GB Storage space
     \item Intel core i3 processor
 \end{enumerate}
+
+\chapter{Conclusion}
+\Large{One of the important real-world medical problems is the detection of diabetes at its early stage. In this study, systematic efforts are made in designing a system which results in the prediction of diabetes. During this work, five machine learning classification algorithms are studied and evaluated on various measures. Experiments are performed on john Diabetes Database. Experimental results determine the adequacy of the designed system with an achieved accuracy of 80\% Using Decision Tree Algorithm. In future, the designed system with the used machine learning classification algorithms can be used to predict or diagnose other diseases. The work can be extended and improved for the automation of diabetes analysis including some other machine learning algorithms. }
 
 %\appendix
 %\chapter{Glossary}
